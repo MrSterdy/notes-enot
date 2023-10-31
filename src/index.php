@@ -1,5 +1,7 @@
 <?php
 
+namespace NotesEnot;
 
+require_once "autoloader.php";
 
-require "routes/index.php";
+require "Web/index.php";
