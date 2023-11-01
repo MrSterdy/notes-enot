@@ -14,7 +14,7 @@ class Database
 
     public function connect(): void
     {
-        $connectResult = mysqli_connect(getenv("MYSQL_HOST"), getenv("MYSQL_USERNAME"), getenv("MYSQL_PASSWORD"), getenv("MYSQL_DATABASE"));
+        $connectResult = mysqli_connect(getenv("MYSQL_HOST"), getenv("MYSQL_USERNAME"), getenv("MYSQL_PASSWORD"), getenv("MYSQL_DATABASE"), intval(getenv("MYSQL_PORT")));
         if (!$connectResult) {
             throw new RuntimeException("Не удалось подключиться к базе данных");
         }
