@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} !/public/
+RewriteRule ^((?!src/).*)$ src/$1 [L,NE,QSA]
+
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ src/Web/public/%1 [L,NE]
