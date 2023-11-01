@@ -1,0 +1,12 @@
+services:
+  mysql:
+    image: mysql:8.2.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "5151:3306"
+    volumes:
+      - "notes-enot-mysql-dev:/var/lib/mysql"
+
+volumes:
+  notes-enot-mysql-dev:
