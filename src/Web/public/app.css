@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;800&display=swap');
+
+body {
+    font-family: "Inter Tight", sans-serif;
+    color: #FFFFFF;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: #212121;
+}
+
+h1, h2 {
+    text-align: center;
+
+    font-weight: 800;
+}
+
+#main {
+    width: 90%;
+    max-width: 32rem;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.position {
+    font-weight: bold;
+}
+
+.box {
+    box-sizing: border-box;
+
+    word-break: break-word;
+
+    background-color: #424242;
+
+    border-radius: 10px;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+form > label > input {
+    width: 100%;
+}
+
+input {
+    border: 2px solid #FFFFFF;
+    outline: none;
+    font: inherit;
+    font-size: 14px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    transition: 300ms;
+}
+form:invalid input[type=submit] {
+    border-color: #F44336;
+}
+form:not(:invalid) input[type=submit] {
+    border-color: #4CAF50;
+}
